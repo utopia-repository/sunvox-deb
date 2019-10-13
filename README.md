@@ -8,13 +8,8 @@ If this repository is up to date with the latest version of SunVox, run:
 
 ```
 uscan --download-current-version --verbose
+origtargz -u
 debuild -us -uc
 ```
 
-Otherwise, run:
-
-```
-uscan --download --verbose
-dch -v <upstream-version>-0utopia1  # Write a new changelog entry
-debuild -us -uc
-```
+Otherwise, write a new changelog entry (`dch -v <upstream-version>-0utopia1`) and then run the above commands.
