@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/architecture.mk
+
+ifeq ($(DEB_HOST_ARCH),armhf)
+	dir=linux_arm_armhf_raspberry_pi
+else ifeq ($(DEB_HOST_ARCH),arm64)
+	dir=linux_arm_arm64
+else ifeq ($(DEB_HOST_ARCH),armel)
+	dir=linux_arm_armel
+else ifeq ($(DEB_HOST_ARCH),i386)
+	dir=linux_x86
+else ifeq ($(DEB_HOST_ARCH),amd64)
+	dir=linux_x86_64
+else
+	$(error Unknown architecture $(DEB_HOST_ARCH), please update debian/rules)
+endif
+
+# Install the right version of sunvox into /usr/bin based on what architecture
+# we're building for. Use DEB_HOST_ARCH per
+# https://wiki.debian.org/CrossBuildPackagingGuidelines
+override_dh_auto_install:
+	install -v -m 755 sunvox/$(dir)/sunvox* -D -t debian/sunvox/usr/bin/
+	dh_auto_install
+
+%:
+	dh $@
