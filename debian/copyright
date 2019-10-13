@@ -1,6 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: sunvox
 Source: https://www.warmplace.ru/soft/sunvox/
+Files-Excluded: sunvox/win* sunvox/macos*
 
 Files: *
 Copyright: 2008-2018, Alexander Zolotov <nightradio@gmail.com>

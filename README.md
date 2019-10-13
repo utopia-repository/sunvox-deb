@@ -12,4 +12,4 @@ origtargz -u
 debuild -us -uc
 ```
 
-Otherwise, write a new changelog entry (`dch -v <upstream-version>-0utopia1`) and then run the above commands.
+Otherwise, write a new changelog entry (`dch -v <upstream-version>+repack-0utopia1`) and then run the above commands.
