@@ -1,3 +1,10 @@
+sunvox (1.9.5d+repack-0utopia1) unstable; urgency=medium
+
+  * New upstream release.
+  * Use dh-strip --no-automatic-dbgsym to skip generating empty dbgsym packages
+
+ -- James Lu <james@overdrivenetworks.com>  Sun, 22 Mar 2020 16:29:11 -0700
+
 sunvox (1.9.4c+repack-0utopia1) unstable; urgency=medium
 
   * Initial release.
