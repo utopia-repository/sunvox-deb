@@ -23,5 +23,8 @@ override_dh_auto_install:
 	install -v -m 755 sunvox/$(dir)/sunvox* -D -t debian/sunvox/usr/bin/
 	dh_auto_install
 
+override_dh_strip:
+	dh_strip --no-automatic-dbgsym
+
 %:
 	dh $@
