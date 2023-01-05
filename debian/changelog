@@ -1,3 +1,9 @@
+sunvox (2.0e+repack-0utopia1) unstable; urgency=medium
+
+  * New upstream release, minor tweaks to package layout.
+
+ --  Rui Carmo <rui.carmo@gmail.com>  Thu, 05 Jan 2023 14:00:02 +0000
+
 sunvox (1.9.5d+repack-0utopia1) unstable; urgency=medium
 
   * New upstream release.

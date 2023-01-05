@@ -5,7 +5,7 @@ include /usr/share/dpkg/architecture.mk
 ifeq ($(DEB_HOST_ARCH),armhf)
 	dir=linux_arm_armhf_raspberry_pi
 else ifeq ($(DEB_HOST_ARCH),arm64)
-	dir=linux_arm_arm64
+	dir=linux_arm64
 else ifeq ($(DEB_HOST_ARCH),armel)
 	dir=linux_arm_armel
 else ifeq ($(DEB_HOST_ARCH),i386)
